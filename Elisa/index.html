@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uma celebração do nosso amor eterno, cheia de memórias e carinho.">
+    <title>Nosso Amor Eterno 💞</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js" defer></script>
+</head>
+<body>
+    <div id="background"></div>
+
+    <div id="heart-container"></div> <!-- Contêiner para os corações flutuantes -->
+
+    <header class="header" role="banner">
+        <div class="container text-center">
+            <h1 id="title">Nosso Amor Eterno 💞</h1>
+            <p id="special-date" class="special-date">Nosso Dia: 07 de Março</p>
+        </div>
+    </header>
+
+    <section class="music-video-section my-5" aria-label="Música e Vídeo">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-6 mb-4">
+                    <div class="spotify-custom-wrapper">
+                        <div class="spotify-custom-image">
+                            <video autoplay loop muted class="video-player">
+                                <source src="videos/SnapTwitter_ZCfQuX1M_4kAp1Kk.mp4.mp4" type="video/mp4">
+                                Seu navegador não suporta o elemento de vídeo.
+                            </video>
+                        </div>
+                        <div class="spotify-info">
+                            <p class="song-title">Mirrors <span class="song-heart">❤️</span></p>
+                            <p class="song-artist">Justin Timberlake <span class="song-duration">5:30</span></p>
+                        </div>
+                        <div class="spotify-controls">
+                            <iframe src="https://open.spotify.com/embed/track/4rHZZAmHpZrA3iH5zx8frV?utm_source=generator" width="100%" height="90" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center countdown-wrapper mb-4">
+                    <h3>Nosso tempo Juntinhos ❤️</h3>
+                    <div class="countdown">
+                        <span id="days">00</span> dias
+                        <span id="hours">00</span> horas
+                        <span id="minutes">00</span> minutos
+                        <span id="seconds">00</span> segundos
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container my-5" role="main">
+        <section class="gallery" aria-labelledby="gallery-title">
+            <h2 id="gallery-title" class="text-center mb-5">Páginas do Nosso Livro</h2>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-3 col-sm-6 mb-5">
+                    <div class="image-wrapper">
+                        <img src="imagens/Foto 2 elisa gosta.jpg" class="gallery-img" alt="O dia em que nossos olhares se cruzaram">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-5">
+                    <div class="image-wrapper">
+                        <img src="imagens/Foto 1 elisa gosta.jpg" class="gallery-img" alt="Nossa primeira aventura de mãos dadas">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-5">
+                    <div class="image-wrapper">
+                        <img src="imagens/Screenshot_2.png" class="gallery-img" alt="Um sorriso que mudou tudo">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-5">
+                    <div class="image-wrapper">
+                        <img src="imagens/Screenshot_4.png" class="gallery-img" alt="O abraço que aqueceu meu coração">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline my-5" aria-labelledby="timeline-title">
+            <h2 id="timeline-title" class="text-center mb-5">Capítulos do Nosso Amor</h2>
+            <ul class="list-group timeline-list">
+                <li class="list-group-item">Mês 1: O primeiro “eu te amo”, tímido, mas verdadeiro 💞</li>
+                <li class="list-group-item">Mês 3: Nosso primeiro dia dos namorados juntos 🌼</li>
+                <li class="list-group-item">Mês 6: Meio ano juntos, celebrando com promessas sussurradas 🎉</li>
+                <li class="list-group-item">Mês 9: Palavras trocadas em silêncios que dizem tudo 💌</li>
+                <li class="list-group-item">Mês 12: Um ano de nós, um amor que só cresce ❤️</li>
+            </ul>
+        </section>
+
+        <section class="love-note text-center my-5" aria-labelledby="note-title">
+            <h2 id="note-title" class="mb-4">Para Você, Meu Tudo</h2>
+            <p id="note" class="love-text">"Você é a melodia que embala meus dias, a luz que guia meus passos. Nosso amor é um poema sem fim, e eu te amo em cada linha."</p>
+        </section>
+
+        <section class="reasons my-5" aria-labelledby="reasons-title">
+            <h2 id="reasons-title" class="text-center mb-5">100 Motivos Para Te Amar</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <ol class="reasons-list">
+                        <li>Te amo pelo jeito que você me faz sorrir só de entrar no quarto.</li>
+                        <li>Te amo por como você fica linda mesmo sem maquiagem.</li>
+                        <li>Te amo pela sua risada que alegra meu dia.</li>
+                        <li>Te amo por me fazer sentir o cara mais sortudo do mundo.</li>
+                        <li>Te amo pelo jeito que você se aninha no meu peito.</li>
+                        <li>Te amo por entender minhas piadas ruins.</li>
+                        <li>Te amo por como você segura minha mão quando estamos juntos.</li>
+                        <li>Te amo por me fazer rir mesmo quando estou bravo.</li>
+                        <li>Te amo pela paciência que você tem comigo.</li>
+                        <li>Te amo por me mostrar um lado da vida que eu não conhecia.</li>
+                        <li>Te amo pelo perfume que você deixa na minha camisa.</li>
+                        <li>Te amo por sonhar comigo sobre nosso futuro.</li>
+                        <li>Te amo por cantar no carro mesmo sem saber a letra.</li>
+                        <li>Te amo por me apoiar quando eu mais preciso.</li>
+                        <li>Te amo por fazer café do jeito que eu gosto.</li>
+                        <li>Te amo pelo seu jeito desajeitado que me conquista.</li>
+                        <li>Te amo pelos apelidos que você inventa pra mim.</li>
+                        <li>Te amo por me fazer sentir o rei do seu mundo.</li>
+                        <li>Te amo por dançar comigo na sala sem motivo.</li>
+                        <li>Te amo pelo brilho nos seus olhos quando você fala de algo que ama.</li>
+                        <li>Te amo por me trazer calma só com sua presença.</li>
+                        <li>Te amo por como você valoriza as coisas simples.</li>
+                        <li>Te amo por me fazer acreditar que o amor existe.</li>
+                        <li>Te amo por ouvir minhas histórias sem se cansar.</li>
+                        <li>Te amo por me aquecer com seu corpo nas noites frias.</li>
+                        <li>Te amo por me inspirar a ser um homem melhor.</li>
+                        <li>Te amo por ficar tão fofa quando dorme.</li>
+                        <li>Te amo por torcer pelos meus sonhos como se fossem seus.</li>
+                        <li>Te amo por me deixar cuidar de você quando está triste.</li>
+                        <li>Te amo por como você diz meu nome com tanto carinho.</li>
+                        <li>Te amo pelos bilhetinhos que você deixa pra mim.</li>
+                        <li>Te amo por me fazer sentir vivo com um simples olhar.</li>
+                        <li>Te amo por ser minha fortaleza nos dias difíceis.</li>
+                        <li>Te amo por me ensinar a aproveitar cada momento.</li>
+                        <li>Te amo por como você me cuida quando eu esqueço de mim.</li>
+                        <li>Te amo por me fazer sorrir com suas mensagens bobas.</li>
+                        <li>Te amo pela sua voz que me acalma quando tudo dá errado.</li>
+                        <li>Te amo por me aceitar com todos os meus defeitos.</li>
+                        <li>Te amo pelas conversas que varam a madrugada.</li>
+                        <li>Te amo por me dar aquele frio na barriga toda vez que te vejo.</li>
+                        <li>Te amo por como você me protege com seu jeito doce.</li>
+                        <li>Te amo por roubar o cobertor e me fazer rir disso.</li>
+                        <li>Te amo por me fazer sonhar com uma vida inteira ao seu lado.</li>
+                        <li>Te amo por tratar todo mundo com tanto carinho.</li>
+                        <li>Te amo por me olhar como se eu fosse o único no mundo.</li>
+                        <li>Te amo por me fazer querer te abraçar o tempo todo.</li>
+                        <li>Te amo por como você fica linda com meu moletom.</li>
+                        <li>Te amo por transformar nossas brigas em momentos leves.</li>
+                        <li>Te amo por me dar seu tempo mesmo quando está ocupada.</li>
+                        <li>Te amo por me fazer sentir o homem mais amado do planeta.</li>
+                        <li>Te amo por como você me motiva com suas palavras.</li>
+                        <li>Te amo por fazer qualquer lugar parecer um lar comigo.</li>
+                        <li>Te amo pelas suas manias que me encantam.</li>
+                        <li>Te amo por me fazer querer te beijar a cada segundo.</li>
+                        <li>Te amo por me animar com seu jeitinho único.</li>
+                        <li>Te amo por cada lembrança que construímos juntos.</li>
+                        <li>Te amo por me fazer sentir o cara mais especial do mundo.</li>
+                        <li>Te amo por como você pede desculpas com aquele olhar.</li>
+                        <li>Te amo por me fazer gostar de acordar cedo só pra te ver.</li>
+                        <li>Te amo por me provocar com seu sorriso travesso.</li>
+                        <li>Te amo por me fazer rir das minhas próprias besteiras.</li>
+                        <li>Te amo por cozinhar pra mim mesmo queimando um pouco.</li>
+                        <li>Te amo por me dar toda a sua atenção quando falo.</li>
+                        <li>Te amo por me consolar com um abraço apertado.</li>
+                        <li>Te amo por me fazer sentir saudade mesmo estando tão perto.</li>
+                        <li>Te amo pelas mensagens que você manda do nada.</li>
+                        <li>Te amo por me fazer querer dançar mesmo sem saber.</li>
+                        <li>Te amo por me corrigir com aquele tom carinhoso.</li>
+                        <li>Te amo por me fazer acreditar que somos pra sempre.</li>
+                        <li>Te amo por como você fica brava e ainda assim é linda.</li>
+                        <li>Te amo por acelerar meu coração com um simples toque.</li>
+                        <li>Te amo por me abraçar por trás e me surpreender.</li>
+                        <li>Te amo por me fazer amar dias chuvosos com você.</li>
+                        <li>Te amo por suas ideias loucas que me divertem.</li>
+                        <li>Te amo por me fazer querer te agradar todo dia.</li>
+                        <li>Te amo por estar ao meu lado mesmo quando eu não mereço.</li>
+                        <li>Te amo por me ensinar a dividir até minhas besteiras.</li>
+                        <li>Te amo por me fazer cócegas só pra me ver rir.</li>
+                        <li>Te amo por me fazer sentir seguro com seu amor.</li>
+                        <li>Te amo por me surpreender com seu jeito único.</li>
+                        <li>Te amo por me fazer querer te mimar sem parar.</li>
+                        <li>Te amo pelas suas histórias que me prendem.</li>
+                        <li>Te amo por me fazer querer ouvir você o dia todo.</li>
+                        <li>Te amo por me dar força quando eu penso em desistir.</li>
+                        <li>Te amo por me fazer amar os silêncios ao seu lado.</li>
+                        <li>Te amo por me acordar com aquele sorriso lindo.</li>
+                        <li>Te amo por me fazer querer te abraçar até o fim do dia.</li>
+                        <li>Te amo por como você me faz feliz sem nem tentar.</li>
+                        <li>Te amo por me ensinar o que é amar de verdade.</li>
+                        <li>Te amo por como suas mãos parecem feitas pras minhas.</li>
+                        <li>Te amo por me fazer querer te olhar por horas.</li>
+                        <li>Te amo por me fazer sonhar com nossa casa juntos.</li>
+                        <li>Te amo por me inspirar a escrever sobre você.</li>
+                        <li>Te amo por me trazer paz com um simples beijo.</li>
+                        <li>Te amo por me fazer querer te proteger sempre.</li>
+                        <li>Te amo por me fazer rir das coisas mais bobas.</li>
+                        <li>Te amo por me fazer sentir que sou tudo pra você.</li>
+                        <li>Te amo por ser minha namorada, minha melhor amiga.</li>
+                        <li>Te amo por ser a mulher que eu sempre quis ao meu lado.</li>
+                        <li>Te amo por me dar um motivo novo todo dia para te amar.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer text-center py-4" role="contentinfo">
+        <p>Feito com o coração para você, do AMOR DA SUA VIDA 💞</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
