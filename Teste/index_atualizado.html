@@ -1,61 +1,246 @@
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<html lang="pt-BR"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Uma celebração do nosso amor eterno, cheia de memórias e carinho.">
+    <meta name="keywords" content="amor, relacionamento, aniversário, memórias, casal">
+    <meta name="author" content="Presente Especial">
+    <meta property="og:title" content="Nosso Amor Eterno 💞">
+    <meta property="og:description" content="Uma celebração do nosso amor eterno">
+    <meta property="og:type" content="website">
+    <link rel="preload" href="styles_atualizado.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js" as="script">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff004f">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect fill='%23ff004f' width='180' height='180'/%3E%3Cpath fill='white' d='M90 50c-11 0-20 9-20 20v10c0 22 20 40 20 40s20-18 20-40V70c0-11-9-20-20-20z'/%3E%3C/svg%3E">
     <title>Nosso Amor Eterno 💞</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js" defer></script>
+    <link rel="stylesheet" href="styles_atualizado.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js" defer=""></script>
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-heart">
+            <div class="heart-loader"></div>
+        </div>
+        <p>Carregando nosso amor...</p>
+    </div>
     <div id="background"></div>
-    <div id="heart-container"></div>
+
+    <div id="heart-container"></div> <!-- Contêiner para os corações flutuantes -->
 
     <header class="header" role="banner">
         <div class="container text-center">
-            <h1 id="title">Nosso Amor Eterno 💞</h1>
-            <p id="special-date" class="special-date">Nosso Dia: 07 de Março</p>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <h1 id="title" class="" style="opacity: 1;">Nosso Amor Eterno 💞</h1>
+            <p id="special-date" class="special-date" style="opacity: 1;">Nosso Dia: 07 de Março</p>
         </div>
     </header>
 
-    <section class="gallery" aria-labelledby="gallery-title">
-        <h2 id="gallery-title" class="text-center mb-5">Páginas do Nosso Livro</h2>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-3 col-sm-6 mb-5">
-                <div class="flip-container">
-                    <div class="flipper">
-                        <div class="front" style="background-image: url('imagens/Foto 1 elisa gosta.jpg');"></div>
-                        <div class="back">
-                            Esta é a mensagem secreta atrás da imagem! 💌
+    <section class="music-video-section my-5" aria-label="Música e Vídeo">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-6 mb-4">
+                    <div class="spotify-custom-wrapper">
+                        <div class="spotify-custom-image">
+                            <video loop="" muted="" class="video-player lazy-video" data-src="videos/SnapTwitter_ZCfQuX1M_4kAp1Kk.mp4.mp4" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect fill='%23ff004f' width='300' height='200'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='white'%3ECarregando...%3C/text%3E%3C/svg%3E">
+                                <source data-src="videos/SnapTwitter_ZCfQuX1M_4kAp1Kk.mp4.mp4" type="video/mp4">
+                                Seu navegador não suporta o elemento de vídeo.
+                            </video>
+                        </div>
+                        <div class="spotify-info">
+                            <p class="song-title">Mirrors <span class="song-heart">❤️</span></p>
+                            <p class="song-artist">Justin Timberlake <span class="song-duration">5:30</span></p>
+                        </div>
+                        <div class="spotify-controls">
+                            <iframe src="https://open.spotify.com/embed/track/4rHZZAmHpZrA3iH5zx8frV?utm_source=generator" width="100%" height="90" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-5">
-                <div class="image-wrapper">
-                    <img src="imagens/Foto 2 elisa gosta.jpg" class="gallery-img" alt="Nossa primeira aventura de mãos dadas">
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-5">
-                <div class="image-wrapper">
-                    <img src="imagens/Screenshot_2.png" class="gallery-img" alt="Um sorriso que mudou tudo">
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 mb-5">
-                <div class="image-wrapper">
-                    <img src="imagens/Screenshot_4.png" class="gallery-img" alt="O abraço que aqueceu meu coração">
+                <div class="col-12 text-center countdown-wrapper mb-4">
+                    <h3>Nosso tempo Juntinhos ❤️</h3>
+                    <div class="countdown">
+                        <span id="days">560</span> dias
+                        <span id="hours">21</span> horas
+                        <span id="minutes">40</span> minutos
+                        <span id="seconds">57</span> segundos
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <main class="container my-5" role="main">
+        <section class="gallery" aria-labelledby="gallery-title">
+            <h2 id="gallery-title" class="text-center mb-5">Páginas do Nosso Livro</h2>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-3 col-sm-6 mb-5">
+                    <div class="image-wrapper" style="opacity: 1; scale: 1;">
+                        <img data-src="imagens/Foto 2 elisa gosta.jpg" class="gallery-img lazy-img" alt="O dia em que nossos olhares se cruzaram" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Ccircle fill='%23ff004f' cx='110' cy='110' r='110'/%3E%3C/svg%3E">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-5">
+                    <div class="image-wrapper" style="opacity: 1; scale: 1;">
+                        <img data-src="imagens/Foto 1 elisa gosta.jpg" class="gallery-img lazy-img" alt="Nossa primeira aventura de mãos dadas" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Ccircle fill='%23ff004f' cx='110' cy='110' r='110'/%3E%3C/svg%3E">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-5">
+                    <div class="image-wrapper" style="opacity: 1; scale: 1;">
+                        <img data-src="imagens/Screenshot_2.png" class="gallery-img lazy-img" alt="Um sorriso que mudou tudo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Ccircle fill='%23ff004f' cx='110' cy='110' r='110'/%3E%3C/svg%3E">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-5">
+                    <div class="image-wrapper" style="opacity: 1; scale: 1;">
+                        <img data-src="imagens/Screenshot_4.png" class="gallery-img lazy-img" alt="O abraço que aqueceu meu coração" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Ccircle fill='%23ff004f' cx='110' cy='110' r='110'/%3E%3C/svg%3E">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline my-5" aria-labelledby="timeline-title">
+            <h2 id="timeline-title" class="text-center mb-5">Capítulos do Nosso Amor</h2>
+            <ul class="list-group timeline-list">
+                <li class="list-group-item">Mês 1: O primeiro “eu te amo”, tímido, mas verdadeiro 💞</li>
+                <li class="list-group-item">Mês 3: Nosso primeiro dia dos namorados juntos 🌼</li>
+                <li class="list-group-item">Mês 6: Meio ano juntos, celebrando com promessas sussurradas 🎉</li>
+                <li class="list-group-item">Mês 9: Palavras trocadas em silêncios que dizem tudo 💌</li>
+                <li class="list-group-item">Mês 12: Um ano de nós, um amor que só cresce ❤️</li>
+            </ul>
+        </section>
+
+        <section class="love-note text-center my-5" aria-labelledby="note-title">
+            <h2 id="note-title" class="mb-4">Para Você, Meu Tudo</h2>
+            <p id="note" class="love-text" style="opacity: 1;">"Você é a melodia que embala meus dias, a luz que guia meus passos. Nosso amor é um poema sem fim, e eu te amo em cada linha."</p>
+        </section>
+
+        <section class="reasons my-5" aria-labelledby="reasons-title">
+            <h2 id="reasons-title" class="text-center mb-5">100 Motivos Para Te Amar</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <ol class="reasons-list">
+                        <li class="" style="opacity: 1;">Te amo pelo jeito que você me faz sorrir só de entrar no quarto.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você fica linda mesmo sem maquiagem.</li>
+                        <li class="" style="opacity: 1;">Te amo pela sua risada que alegra meu dia.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sentir o cara mais sortudo do mundo.</li>
+                        <li class="" style="opacity: 1;">Te amo pelo jeito que você se aninha no meu peito.</li>
+                        <li class="" style="opacity: 1;">Te amo por entender minhas piadas ruins.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você segura minha mão quando estamos juntos.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer rir mesmo quando estou bravo.</li>
+                        <li class="" style="opacity: 1;">Te amo pela paciência que você tem comigo.</li>
+                        <li class="" style="opacity: 1;">Te amo por me mostrar um lado da vida que eu não conhecia.</li>
+                        <li class="" style="opacity: 1;">Te amo pelo perfume que você deixa na minha camisa.</li>
+                        <li class="" style="opacity: 1;">Te amo por sonhar comigo sobre nosso futuro.</li>
+                        <li class="" style="opacity: 1;">Te amo por cantar no carro mesmo sem saber a letra.</li>
+                        <li class="" style="opacity: 1;">Te amo por me apoiar quando eu mais preciso.</li>
+                        <li class="" style="opacity: 1;">Te amo por fazer café do jeito que eu gosto.</li>
+                        <li class="" style="opacity: 1;">Te amo pelo seu jeito desajeitado que me conquista.</li>
+                        <li class="" style="opacity: 1;">Te amo pelos apelidos que você inventa pra mim.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sentir o rei do seu mundo.</li>
+                        <li class="" style="opacity: 1;">Te amo por dançar comigo na sala sem motivo.</li>
+                        <li class="" style="opacity: 1;">Te amo pelo brilho nos seus olhos quando você fala de algo que ama.</li>
+                        <li class="" style="opacity: 1;">Te amo por me trazer calma só com sua presença.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você valoriza as coisas simples.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer acreditar que o amor existe.</li>
+                        <li class="" style="opacity: 1;">Te amo por ouvir minhas histórias sem se cansar.</li>
+                        <li class="" style="opacity: 1;">Te amo por me aquecer com seu corpo nas noites frias.</li>
+                        <li class="" style="opacity: 1;">Te amo por me inspirar a ser um homem melhor.</li>
+                        <li class="" style="opacity: 1;">Te amo por ficar tão fofa quando dorme.</li>
+                        <li class="" style="opacity: 1;">Te amo por torcer pelos meus sonhos como se fossem seus.</li>
+                        <li class="" style="opacity: 1;">Te amo por me deixar cuidar de você quando está triste.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você diz meu nome com tanto carinho.</li>
+                        <li class="" style="opacity: 1;">Te amo pelos bilhetinhos que você deixa pra mim.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sentir vivo com um simples olhar.</li>
+                        <li class="" style="opacity: 1;">Te amo por ser minha fortaleza nos dias difíceis.</li>
+                        <li class="" style="opacity: 1;">Te amo por me ensinar a aproveitar cada momento.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você me cuida quando eu esqueço de mim.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sorrir com suas mensagens bobas.</li>
+                        <li class="" style="opacity: 1;">Te amo pela sua voz que me acalma quando tudo dá errado.</li>
+                        <li class="" style="opacity: 1;">Te amo por me aceitar com todos os meus defeitos.</li>
+                        <li class="" style="opacity: 1;">Te amo pelas conversas que varam a madrugada.</li>
+                        <li class="" style="opacity: 1;">Te amo por me dar aquele frio na barriga toda vez que te vejo.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você me protege com seu jeito doce.</li>
+                        <li class="" style="opacity: 1;">Te amo por roubar o cobertor e me fazer rir disso.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sonhar com uma vida inteira ao seu lado.</li>
+                        <li class="" style="opacity: 1;">Te amo por tratar todo mundo com tanto carinho.</li>
+                        <li class="" style="opacity: 1;">Te amo por me olhar como se eu fosse o único no mundo.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer querer te abraçar o tempo todo.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você fica linda com meu moletom.</li>
+                        <li class="" style="opacity: 1;">Te amo por transformar nossas brigas em momentos leves.</li>
+                        <li class="" style="opacity: 1;">Te amo por me dar seu tempo mesmo quando está ocupada.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sentir o homem mais amado do planeta.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você me motiva com suas palavras.</li>
+                        <li class="" style="opacity: 1;">Te amo por fazer qualquer lugar parecer um lar comigo.</li>
+                        <li class="" style="opacity: 1;">Te amo pelas suas manias que me encantam.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer querer te beijar a cada segundo.</li>
+                        <li class="" style="opacity: 1;">Te amo por me animar com seu jeitinho único.</li>
+                        <li class="" style="opacity: 1;">Te amo por cada lembrança que construímos juntos.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sentir o cara mais especial do mundo.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você pede desculpas com aquele olhar.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer gostar de acordar cedo só pra te ver.</li>
+                        <li class="" style="opacity: 1;">Te amo por me provocar com seu sorriso travesso.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer rir das minhas próprias besteiras.</li>
+                        <li class="" style="opacity: 1;">Te amo por cozinhar pra mim mesmo queimando um pouco.</li>
+                        <li class="" style="opacity: 1;">Te amo por me dar toda a sua atenção quando falo.</li>
+                        <li class="" style="opacity: 1;">Te amo por me consolar com um abraço apertado.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sentir saudade mesmo estando tão perto.</li>
+                        <li class="" style="opacity: 1;">Te amo pelas mensagens que você manda do nada.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer querer dançar mesmo sem saber.</li>
+                        <li class="" style="opacity: 1;">Te amo por me corrigir com aquele tom carinhoso.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer acreditar que somos pra sempre.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você fica brava e ainda assim é linda.</li>
+                        <li class="" style="opacity: 1;">Te amo por acelerar meu coração com um simples toque.</li>
+                        <li class="" style="opacity: 1;">Te amo por me abraçar por trás e me surpreender.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer amar dias chuvosos com você.</li>
+                        <li class="" style="opacity: 1;">Te amo por suas ideias loucas que me divertem.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer querer te agradar todo dia.</li>
+                        <li class="" style="opacity: 1;">Te amo por estar ao meu lado mesmo quando eu não mereço.</li>
+                        <li class="" style="opacity: 1;">Te amo por me ensinar a dividir até minhas besteiras.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer cócegas só pra me ver rir.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sentir seguro com seu amor.</li>
+                        <li class="" style="opacity: 1;">Te amo por me surpreender com seu jeito único.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer querer te mimar sem parar.</li>
+                        <li class="" style="opacity: 1;">Te amo pelas suas histórias que me prendem.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer querer ouvir você o dia todo.</li>
+                        <li class="" style="opacity: 1;">Te amo por me dar força quando eu penso em desistir.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer amar os silêncios ao seu lado.</li>
+                        <li class="" style="opacity: 1;">Te amo por me acordar com aquele sorriso lindo.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer querer te abraçar até o fim do dia.</li>
+                        <li class="" style="opacity: 1;">Te amo por como você me faz feliz sem nem tentar.</li>
+                        <li class="" style="opacity: 1;">Te amo por me ensinar o que é amar de verdade.</li>
+                        <li class="" style="opacity: 1;">Te amo por como suas mãos parecem feitas pras minhas.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer querer te olhar por horas.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sonhar com nossa casa juntos.</li>
+                        <li class="" style="opacity: 1;">Te amo por me inspirar a escrever sobre você.</li>
+                        <li class="" style="opacity: 1;">Te amo por me trazer paz com um simples beijo.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer querer te proteger sempre.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer rir das coisas mais bobas.</li>
+                        <li class="" style="opacity: 1;">Te amo por me fazer sentir que sou tudo pra você.</li>
+                        <li class="" style="opacity: 1;">Te amo por ser minha namorada, minha melhor amiga.</li>
+                        <li class="" style="opacity: 1;">Te amo por ser a mulher que eu sempre quis ao meu lado.</li>
+                        <li class="" style="opacity: 1;">Te amo por me dar um motivo novo todo dia para te amar.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer text-center py-4" role="contentinfo">
         <p>Feito com o coração para você, do AMOR DA SUA VIDA 💞</p>
     </footer>
 
-    <script src="script.js" defer></script>
-</body>
-</html>
+    <script src="script.js" defer=""></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(error => console.log('SW registration failed'));
+            });
+        }
+    </script>
+
+</body></html>

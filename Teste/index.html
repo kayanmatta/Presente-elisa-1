@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uma celebração do nosso amor eterno - Página de Entrada">
+    <meta name="keywords" content="amor, relacionamento, aniversário, memórias, casal">
+    <meta name="author" content="Presente Especial">
+    <meta property="og:title" content="Bem-vindo ao Nosso Amor 💕">
+    <meta property="og:description" content="Uma entrada especial para nossa celebração de amor">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#ff004f">
+    <title>Bem-vindo ao Nosso Amor 💕</title>
+    <link rel="stylesheet" href="welcome-styles.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js" as="script">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js" defer></script>
+</head>
+<body>
+    <div id="welcome-background"></div>
+    
+    <!-- Hearts container for background animation -->
+    <div id="welcome-hearts-container"></div>
+    
+    <main class="welcome-container">
+        <h1 class="welcome-title">Bem-vindo ao Nosso Amor 💕</h1>
+        
+        <!-- Letter container -->
+        <div class="letter-container" id="letterContainer">
+            <!-- Closed letter state -->
+            <div class="letter-closed" id="letterClosed">
+                <div class="letter-envelope">
+                    <div class="letter-flap"></div>
+                    <div class="letter-body">
+                        <div class="heart-seal">❤️</div>
+                    </div>
+                </div>
+                <p class="letter-hint">Clique na carta para abrir</p>
+            </div>
+            
+            <!-- Opened letter state -->
+            <div class="letter-opened" id="letterOpened">
+                <div class="letter-content">
+                    <div class="letter-header">
+                        <h2>Para Você, Meu Amor 💝</h2>
+                    </div>
+                    <div class="letter-text">
+                        <p>Esta é uma celebração especial do nosso amor...</p>
+                        <p>Cada página é uma memória, cada momento é nosso.</p>
+                        <p class="letter-signature">Com todo meu amor,<br>
+                        <span class="signature-name">Seu Eterno Admirador</span></p>
+                    </div>
+                    <button class="enter-button" id="enterButton">
+                        <span class="button-text">Veja nosso amor</span>
+                        <span class="button-icon">💖</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating particles for ambiance -->
+        <div class="particles-container" id="particlesContainer"></div>
+    </main>
+
+    <script src="welcome-script.js"></script>
+</body>
+</html>

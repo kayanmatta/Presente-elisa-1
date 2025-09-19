@@ -1,4 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Preloader management
+    const preloader = document.getElementById('preloader');
+    
+    // Hide preloader after content loads
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+            setTimeout(() => preloader.style.display = 'none', 500);
+        }, 1000);
+    });
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.querySelector('.theme-icon');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    
+    // Set initial theme
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeIcon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+    
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeIcon.textContent = newTheme === 'light' ? '🌙' : '☀️';
+    });
+
+    // Lazy loading implementation
+    const lazyImages = document.querySelectorAll('.lazy-img');
+    const lazyVideos = document.querySelectorAll('.lazy-video');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    const videoObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const video = entry.target;
+                const source = video.querySelector('source');
+                if (source && source.dataset.src) {
+                    source.src = source.dataset.src;
+                    video.load();
+                    video.play();
+                    video.classList.add('loaded');
+                }
+                observer.unobserve(video);
+            }
+        });
+    });
+    
+    lazyImages.forEach(img => imageObserver.observe(img));
+    lazyVideos.forEach(video => videoObserver.observe(video));
     // Função para atualizar o contador
     function updateCountdown() {
         const startDate = new Date("2024-03-07T00:00:00").getTime(); // Ajustado para 07 de Março de 2024
@@ -40,46 +102,72 @@ document.addEventListener("DOMContentLoaded", function () {
     Velocity(note, { opacity: 0, translateY: 20 }, { duration: 0 });
     Velocity(note, { opacity: 1, translateY: 0 }, { duration: 1500, delay: 1000, easing: "easeInOut" });
 
-    // Animação dos 100 motivos
-    const reasons = document.querySelectorAll(".reasons-list li");
-    reasons.forEach((reason, index) => {
-        Velocity(reason, { opacity: 0, translateY: 20 }, { duration: 0 });
-        Velocity(reason, { opacity: 1, translateY: 0 }, { duration: 800, delay: index * 50, easing: "easeOut" });
-    });
+    // Optimized animations with Intersection Observer
+    const animatedElements = document.querySelectorAll('.reasons-list li, .image-wrapper, .love-text');
+    
+    const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.willChange = 'transform, opacity';
+            } else {
+                entry.target.style.willChange = 'auto';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    animatedElements.forEach(el => animationObserver.observe(el));
 
-    // Função para criar corações flutuantes
+    // Optimized heart creation with reduced frequency
+    let heartCreationInterval;
+    let lastHeartCreation = 0;
+    const heartCreationDelay = 500; // Reduced frequency
+    
     function createHeart() {
+        const now = Date.now();
+        if (now - lastHeartCreation < heartCreationDelay) return;
+        
         const heartContainer = document.getElementById("heart-container");
-        if (heartContainer.children.length < 20) { // Limite de 20 corações simultâneos
+        if (heartContainer.children.length < 15) { // Reduced max hearts
             const heart = document.createElement("div");
             heart.classList.add("heart");
 
             const size = Math.random() * 15 + 10;
-            heart.style.width = `${size}px`;
-            heart.style.height = `${size}px`;
-            heart.style.left = `${Math.random() * 100}vw`;
+            const duration = Math.random() * 3 + 3;
+            
+            heart.style.cssText = `
+                width: ${size}px;
+                height: ${size}px;
+                left: ${Math.random() * 100}vw;
+                animation-duration: ${duration}s;
+            `;
 
             heartContainer.appendChild(heart);
+            lastHeartCreation = now;
 
-            const duration = Math.random() * 3 + 3;
-            heart.style.animationDuration = `${duration}s`;
-
-            setTimeout(() => heart.remove(), duration * 1000);
+            // Use setTimeout instead of relying on animation end
+            setTimeout(() => {
+                if (heart.parentNode) heart.remove();
+            }, duration * 1000);
         }
     }
 
-    const heartInterval = 300;
-    setInterval(createHeart, heartInterval);
-
-    function adjustHeartFrequency() {
-        const width = window.innerWidth;
-        if (width < 576) {
-            heartInterval = 500; // Menos corações em telas pequenas
-        } else {
-            heartInterval = 300; // Mais corações em telas maiores
+    // Use requestAnimationFrame for better performance
+    function heartAnimationLoop() {
+        if (Math.random() < 0.3) { // 30% chance per frame
+            createHeart();
         }
+        requestAnimationFrame(heartAnimationLoop);
     }
-
-    window.addEventListener("resize", adjustHeartFrequency);
-    adjustHeartFrequency();
+    
+    // Start heart animation when page is visible
+    if (!document.hidden) {
+        heartAnimationLoop();
+    }
+    
+    // Pause/resume hearts based on page visibility
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            heartAnimationLoop();
+        }
+    });
 });

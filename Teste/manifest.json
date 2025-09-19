@@ -1,0 +1,22 @@
+{
+    "name": "Nosso Amor Eterno",
+    "short_name": "Amor Eterno",
+    "description": "Uma celebração do nosso amor eterno",
+    "start_url": "/index_atualizado.html",
+    "display": "standalone",
+    "background_color": "#1a001a",
+    "theme_color": "#ff004f",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect fill='%23ff004f' width='192' height='192'/%3E%3Cpath fill='white' d='M96 50c-11 0-20 9-20 20v10c0 22 20 40 20 40s20-18 20-40V70c0-11-9-20-20-20z'/%3E%3C/svg%3E",
+            "sizes": "192x192",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect fill='%23ff004f' width='512' height='512'/%3E%3Cpath fill='white' d='M256 100c-22 0-40 18-40 40v20c0 44 40 80 40 80s40-36 40-80v-20c0-22-18-40-40-40z'/%3E%3C/svg%3E",
+            "sizes": "512x512",
+            "type": "image/svg+xml"
+        }
+    ]
+}
